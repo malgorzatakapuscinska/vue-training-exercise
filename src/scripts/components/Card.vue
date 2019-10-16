@@ -26,9 +26,9 @@
   module.exports = {
     props: ['movie'],
     data() {
-    return {
-    }
-  },
+      return {
+      }
+    },
 }
 </script>
 

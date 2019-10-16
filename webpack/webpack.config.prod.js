@@ -101,14 +101,14 @@ module.exports = merge(common, {
               interpolate: true,
             },
           },
-          {
-            loader: 'string-replace-loader',
-            options: {
-              flags: 'g',
-              replace: '',
-              search: '[\.]?/src/',
-            },
-          },
+          // {
+          //   loader: 'string-replace-loader',
+          //   options: {
+          //     flags: 'g',
+          //     replace: '',
+          //     search: '[\.]?/src/',
+          //   },
+          // },
         ],
       },
     ],
