@@ -57,7 +57,6 @@ import Card from  './components/Card.vue'
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    background: url(../images/background.jpg), no-repeat;
     background-size: 50%;
   }
   .container {

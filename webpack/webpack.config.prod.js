@@ -16,7 +16,7 @@ const pages = Fs
   .readdirSync(Path.resolve('./src'))
   .filter(path => path.endsWith('.html'))
   .filter(path => process.env.NODE_ENV === 'production' ? !path.startsWith('_') : true)
-  .filter(path => process.env.NODE_ENV === 'production' ? path !== 'index.html' : true)
+  // .filter(path => process.env.NODE_ENV === 'production' ? path !== 'index.html' : true)
 
 module.exports = merge(common, {
   mode: 'production',
@@ -87,7 +87,7 @@ module.exports = merge(common, {
           loader: 'file-loader',
           options: {
             name: '[path][name].[ext]',
-            outputPath: url => url.replace('../src/', ''),
+            outputPath: url => url.replace('./src/', ''),
           },
         },
       },

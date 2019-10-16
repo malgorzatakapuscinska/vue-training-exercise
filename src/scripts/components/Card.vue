@@ -15,7 +15,7 @@
       <div class="card__movie-description">
         <p class="">{{ movie.desc }}</p>
       </div>
-      <div class="card__button">
+      <div class="card__button" :style="{backgroundImage: 'url(src//images/triangle.png)'}">
         <a :href="movie.video" target="_blank">See trailer</a>
       </div>
     </div>
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-  // import styles from "../../styles/card.scss"
   module.exports = {
     props: ['movie'],
     data() {
