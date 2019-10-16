@@ -13,4 +13,11 @@ module.exports = {
   plugins: [
     new DotenvFlowPlugin(),
   ],
+  resolve: {
+    // Add '.ts' and '.tsx' as resolvable extensions.
+    alias: {
+        vue: 'vue/dist/vue.js'
+    },
+    extensions: [".ts", ".tsx", ".js", ".json"]
+  }
 }
