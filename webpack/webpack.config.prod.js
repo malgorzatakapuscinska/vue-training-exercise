@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 require('dotenv-flow').config()
 
 const common = require('./webpack.common.js')
@@ -24,9 +25,10 @@ module.exports = merge(common, {
   bail: true,
   output: {
     filename: 'js/[name].js',
-    path: Path.resolve(__dirname, '../dist'),
+    path: Path.resolve(__dirname, '../docs'),
   },
   plugins: [
+    new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
@@ -49,12 +51,16 @@ module.exports = merge(common, {
         },
         filename: `${page}`,
         template: Path.resolve(__dirname, `../src/${page}`),
-        title: 'Headtrip',
+        title: 'vue',
       })
     ),
   ],
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
@@ -63,6 +69,7 @@ module.exports = merge(common, {
       {
         test: /\.s?css$/i,
         use: [
+          'vue-style-loader',
           MiniCssExtractPlugin.loader,
           'css-loader',
           {
