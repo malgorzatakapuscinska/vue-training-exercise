@@ -15,7 +15,7 @@
       <div class="card__movie-description">
         <p class="">{{ movie.desc }}</p>
       </div>
-      <div class="card__button" :style="{backgroundImage: 'url(src//images/triangle.png)'}">
+      <div class="card__button">
         <a :href="movie.video" target="_blank">See trailer</a>
       </div>
     </div>

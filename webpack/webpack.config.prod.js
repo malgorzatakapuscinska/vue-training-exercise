@@ -93,7 +93,7 @@ module.exports = merge(common, {
       },
       {
         test: /\.html$/,
-        include: Path.resolve(__dirname, '../src/components'),
+        // include: Path.resolve(__dirname, '../src/components'),
         use: [
           {
             loader: 'html-loader',
