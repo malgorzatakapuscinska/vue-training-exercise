@@ -87,7 +87,7 @@ module.exports = merge(common, {
           loader: 'file-loader',
           options: {
             name: '[path][name].[ext]',
-            outputPath: url => url.replace('src/', ''),
+            outputPath: url => url.replace('../src/', ''),
           },
         },
       },
