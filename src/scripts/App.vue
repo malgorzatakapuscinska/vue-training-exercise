@@ -41,7 +41,7 @@ import Card from  './components/Card.vue'
           length: '144 min',
           kindOf: 'Phantasy, Action',
           desc: 'The first supernatural Ghost Rider is stunt motorcyclist Johnny Blaze, who, in order to save the life of his father, agreed to give his soul to "Satan" (later revealed to be an arch-demon named Mephisto). At night and when around evil, Blaze finds his flesh consumed by hellfire, causing his head to become a flaming skull. He rides a fiery motorcycle and wields blasts of hellfire from his body, usually from his skeletal hands.',
-          imgSrc:  process.env.NODE_ENV === 'production' ? './images/3.jpg' : './src/images/3.jpg',
+          imgSrc: process.env.NODE_ENV === "production" ? './images/3.jpg' : './src/images/3.jpg',
           video: 'https://youtu.be/8M0lLJfNPds'
         }
       ]}
