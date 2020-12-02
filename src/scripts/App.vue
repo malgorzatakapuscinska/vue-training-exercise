@@ -31,7 +31,7 @@ import Card from  './components/Card.vue'
           length: '144 min',
           kindOf: 'Chase film',
           desc: 'The young James Bond gains his licence to kill and status as a 00 agent by assassinating the traitorous MI6 section chief Dryden at the British Embassy in Prague, as well as his terrorist contact, Fisher, in a bathroom in Lahore, Pakistan.',
-          imgSrc: './src/images/2.jpg',
+          imgSrc: process.env.NODE_ENV === "production" ? './images/2.jpg' : './src/images/2.jpg',
           video: 'https://youtu.be/36mnx8dBbGE'
         },
         {
@@ -41,7 +41,7 @@ import Card from  './components/Card.vue'
           length: '144 min',
           kindOf: 'Phantasy, Action',
           desc: 'The first supernatural Ghost Rider is stunt motorcyclist Johnny Blaze, who, in order to save the life of his father, agreed to give his soul to "Satan" (later revealed to be an arch-demon named Mephisto). At night and when around evil, Blaze finds his flesh consumed by hellfire, causing his head to become a flaming skull. He rides a fiery motorcycle and wields blasts of hellfire from his body, usually from his skeletal hands.',
-          imgSrc: './src/images/3.jpg',
+          imgSrc:  process.env.NODE_ENV === 'production' ? './images/3.jpg' : './src/images/3.jpg',
           video: 'https://youtu.be/8M0lLJfNPds'
         }
       ]}
