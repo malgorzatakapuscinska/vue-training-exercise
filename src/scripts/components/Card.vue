@@ -7,11 +7,12 @@
       <h2>{{movie.title}}</h2>
       <div class="card__movie-details">
         <ul>
-          <li>{{ movie.prodDate }}</li>
+          <li>{{movie.prodDate}}</li>
           <li>{{movie.length}}</li>
           <li>{{movie.kindOf}}</li>
         </ul>
       </div>
+      <span>{{movie.imgSrc}}</span>
       <div class="card__movie-description">
         <p class="">{{ movie.desc }}</p>
       </div>
@@ -29,6 +30,7 @@
       return {
       }
     },
+
 }
 </script>
 

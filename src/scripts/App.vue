@@ -6,7 +6,6 @@
     </div>
   </section>
 </template>
-
 <script>
 import Card from  './components/Card.vue'
 
@@ -22,7 +21,7 @@ import Card from  './components/Card.vue'
           length: '115 min',
           kindOf: 'Phantasy, Adventure',
           desc: 'Powerfull sorecer MD Stephen Strange fights with darkness powers to save the world. American superhero film based on the Marvel Comics character of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.',
-          imgSrc: (process.env === "production")? './images/1.jpg' : "./src/images/1.jpg",
+          imgSrc: process.env.NODE_ENV === "production" ? './images/1.jpg' : "./src/images/1.jpg",
           video: 'https://youtu.be/HSzx-zryEgM'
         },
         {
