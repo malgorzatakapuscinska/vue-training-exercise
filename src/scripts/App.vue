@@ -76,9 +76,7 @@ import Card from  './components/Card.vue'
     right: 0;
     padding: 30px 0;
     color: white;
-    // padding-left: 150px;
     text-align: center;
-    // text-align: left;
     text-transform: uppercase;
     margin: 0;
     background-color: #1d4801;
