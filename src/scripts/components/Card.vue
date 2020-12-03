@@ -12,7 +12,6 @@
           <li>{{movie.kindOf}}</li>
         </ul>
       </div>
-      <span>{{movie.imgSrc}}</span>
       <div class="card__movie-description">
         <p class="">{{ movie.desc }}</p>
       </div>

@@ -52,16 +52,20 @@ import Card from  './components/Card.vue'
   }
 </script>
 <style lang="scss">
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
   body {
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
     background-size: 50%;
+    box-sizing: border-box;
+
   }
   .container {
-     width: 85%;
     background-color: rgba(0, 0, 0, 0.3);
-    margin: 102px auto 0 auto;
+    margin: 0 auto;
     padding: 10px;
   }
   h1 {
@@ -72,8 +76,9 @@ import Card from  './components/Card.vue'
     right: 0;
     padding: 30px 0;
     color: white;
-    padding-left: 150px;
-    text-align: left;
+    // padding-left: 150px;
+    text-align: center;
+    // text-align: left;
     text-transform: uppercase;
     margin: 0;
     background-color: #1d4801;
